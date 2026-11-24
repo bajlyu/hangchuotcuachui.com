@@ -1,0 +1,1287 @@
+<!DOCTYPE html><html lang="vi"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hang Chuột Chũi — Website Đọc &amp; Lưu Sách</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'forest-hero': '#164A33',
+        'kale-pink': '#F49AC1',
+        'kale-olive': '#6E8F24',
+        'plum-overlay': '#690055',
+        'cream-surface': '#F6F3EE',
+        'light-primary': '#00331F',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#164A33',
+        'light-on-primary-container': '#85B99B',
+        'light-secondary': '#904669',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#FEA3CA',
+        'light-on-secondary-container': '#7B3457',
+        'light-tertiary': '#213000',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#334800',
+        'light-on-tertiary-container': '#96BA4B',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#F9FAF6',
+        'light-on-background': '#191C1A',
+        'light-surface': '#F9FAF6',
+        'light-surface-dim': '#D9DAD7',
+        'light-surface-bright': '#FFFFFF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F3F4F0',
+        'light-surface-container': '#EDEEEA',
+        'light-surface-container-high': '#E7E9E5',
+        'light-surface-container-highest': '#E1E3DF',
+        'light-on-surface': '#191C1A',
+        'light-surface-variant': '#DCE5DD',
+        'light-on-surface-variant': '#414943',
+        'light-outline': '#717973',
+        'light-outline-variant': '#C0C9C1',
+        'light-inverse-surface': '#2E312F',
+        'light-inverse-on-surface': '#F0F1ED',
+        'light-inverse-primary': '#9DD2B3',
+        'dark-primary': '#9DD2B3',
+        'dark-on-primary': '#003823',
+        'dark-primary-container': '#164A33',
+        'dark-on-primary-container': '#85B99B',
+        'dark-secondary': '#FFAFD0',
+        'dark-on-secondary': '#581739',
+        'dark-secondary-container': '#732E51',
+        'dark-on-secondary-container': '#F49AC1',
+        'dark-tertiary': '#AED361',
+        'dark-on-tertiary': '#253600',
+        'dark-tertiary-container': '#334800',
+        'dark-on-tertiary-container': '#96BA4B',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#111412',
+        'dark-on-background': '#E1E3DF',
+        'dark-surface': '#111412',
+        'dark-surface-dim': '#111412',
+        'dark-surface-bright': '#373A37',
+        'dark-surface-container-lowest': '#0C0F0D',
+        'dark-surface-container-low': '#191C1A',
+        'dark-surface-container': '#1D201E',
+        'dark-surface-container-high': '#282B28',
+        'dark-surface-container-highest': '#333533',
+        'dark-on-surface': '#E1E3DF',
+        'dark-surface-variant': '#414943',
+        'dark-on-surface-variant': '#C0C9C1',
+        'dark-outline': '#8A938C',
+        'dark-outline-variant': '#414943',
+        'dark-inverse-surface': '#E1E3DF',
+        'dark-inverse-on-surface': '#2E312F',
+        'dark-inverse-primary': '#36684F',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '12px',
+        'md': '14px',
+        'lg': '20px',
+        'xl': '28px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'page-margin': '32px',
+      },
+      fontFamily: {
+        'display': ['"Alata"', 'sans-serif'],
+        'headline': ['"Alata"', 'sans-serif'],
+        'title': ['"Instrument Sans"', 'sans-serif'],
+        'body': ['"Instrument Sans"', 'sans-serif'],
+        'label': ['"Instrument Sans"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['72px', { lineHeight: '76px', letterSpacing: '-1.5px', fontWeight: '400' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '400' }],
+        'display-md': ['48px', { lineHeight: '54px', letterSpacing: '-1px', fontWeight: '400' }],
+        'display-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '400' }],
+        'headline-lg': ['36px', { lineHeight: '42px', letterSpacing: '-0.5px', fontWeight: '400' }],
+        'headline-lg-mobile': ['24px', { lineHeight: '30px', letterSpacing: '0px', fontWeight: '400' }],
+        'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '400' }],
+        'title-lg': ['20px', { lineHeight: '28px', letterSpacing: '-0.2px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'morph-transition': '750ms',
+        'surface-enter': '300ms',
+        'card-lift': '280ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'morph-transition': '0ms',
+        'surface-enter': '0ms',
+        'card-lift': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'morph-transition': 'cubic-bezier(0.22, 1, 0.36, 1)',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'card-lift': 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Source+Code+Pro:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+
+    /* ==================== Morph Transition: Template 1 <-> Template 2 ==================== */
+    .morph-stage {
+      position: relative;
+      overflow-x: hidden;
+    }
+    .template-layer {
+      transition:
+        transform 750ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+        filter 650ms cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform, opacity, filter;
+    }
+    .stage-t1 #template-1 {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      filter: blur(0px);
+      pointer-events: auto;
+      position: relative;
+      z-index: 20;
+    }
+    .stage-t1 #template-2 {
+      opacity: 0;
+      transform: scale(1.05) translateY(40px);
+      filter: blur(10px);
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+    }
+    .stage-t2 #template-1 {
+      opacity: 0;
+      transform: scale(0.86) translateY(-48px);
+      filter: blur(12px);
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+    }
+    .stage-t2 #template-2 {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      filter: blur(0px);
+      pointer-events: auto;
+      position: relative;
+      z-index: 20;
+    }
+    .hero-wordmark {
+      transition: transform 750ms cubic-bezier(0.22, 1, 0.36, 1), letter-spacing 750ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .stage-t2 .hero-wordmark {
+      transform: scale(0.65) translateY(-80px);
+      letter-spacing: 0.08em;
+    }
+
+    /* ==================== DriftWall 3D Engine ==================== */
+    .driftwall-viewport {
+      position: relative;
+      height: 640px;
+      width: 100%;
+      overflow: hidden;
+      perspective: 1700px;
+      perspective-origin: 50% 50%;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+    }
+    .driftwall-plane {
+      position: absolute;
+      inset: -140px -120px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 28px;
+      transform-style: preserve-3d;
+      transform: rotateX(16deg) rotateY(-28deg);
+      transition: transform 180ms ease-out;
+    }
+    .driftwall-col {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      width: 180px;
+      flex-shrink: 0;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .driftwall-tile {
+      position: relative;
+      width: 180px;
+      height: 262px;
+      border-radius: 16px;
+      overflow: hidden;
+      flex-shrink: 0;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 320ms ease-out;
+      box-shadow: 0 14px 28px rgba(105, 0, 85, 0.22);
+    }
+    .driftwall-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) brightness(0.78);
+      transition: filter 320ms ease-out, transform 320ms ease-out;
+    }
+    .driftwall-tile .tile-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: #690055;
+      opacity: 0.45;
+      mix-blend-mode: multiply;
+      transition: opacity 320ms ease-out;
+    }
+    .driftwall-tile:hover {
+      transform: translateZ(64px) scale(1.06);
+      box-shadow: 0 24px 44px rgba(105, 0, 85, 0.4);
+      z-index: 30;
+    }
+    .driftwall-tile:hover img {
+      filter: grayscale(0%) brightness(1);
+    }
+    .driftwall-tile:hover .tile-overlay {
+      opacity: 0.08;
+    }
+
+    /* ==================== LineSidebar Tag Selector ==================== */
+    .line-sidebar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+    .line-sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      color: #f0ffd5;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      padding: 4px 0;
+      text-align: left;
+      background: transparent;
+      border: 0;
+      transition: transform 100ms cubic-bezier(0.22, 1, 0.36, 1), color 180ms ease-out;
+      will-change: transform;
+    }
+    .line-sidebar-tick {
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      background-color: rgba(240, 255, 213, 0.32);
+      transform-origin: left center;
+      transform: scaleX(0.5);
+      transition: transform 100ms cubic-bezier(0.22, 1, 0.36, 1), width 180ms ease-out, background-color 180ms ease-out;
+      flex-shrink: 0;
+    }
+    .line-sidebar-index {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.78rem;
+      opacity: 0.55;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+      transition: color 180ms ease-out, opacity 180ms ease-out;
+    }
+    .line-sidebar-label {
+      font-family: 'Instrument Sans', sans-serif;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 180ms ease-out, font-weight 180ms ease-out;
+    }
+    .line-sidebar-item.is-active .line-sidebar-tick {
+      width: 60px;
+      transform: scaleX(1) !important;
+      background-color: #99b966;
+    }
+    .line-sidebar-item.is-active .line-sidebar-index {
+      color: #99b966;
+      opacity: 1;
+    }
+    .line-sidebar-item.is-active .line-sidebar-label {
+      color: #f0ffd5;
+      font-weight: 700;
+      text-shadow: 0 0 18px rgba(155, 24, 89, 0.65);
+    }
+    .line-sidebar-item.is-active {
+      border-left: 3px solid #9b1859;
+      padding-left: 10px;
+    }
+
+    /* ==================== CurvedLoop Author Marquee ==================== */
+    .curved-loop-mask {
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.45) 10%, black 22%, black 78%, rgba(0, 0, 0, 0.45) 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.45) 10%, black 22%, black 78%, rgba(0, 0, 0, 0.45) 90%, transparent 100%);
+    }
+    .curved-author-tspan {
+      cursor: pointer;
+      transition: fill 180ms ease-out, opacity 180ms ease-out;
+    }
+    .curved-author-tspan:hover {
+      fill: #F49AC1;
+    }
+
+    /* ==================== 3D FlipCard inside Book Detail Modal ==================== */
+    .flip-card-scene {
+      perspective: 1100px;
+      width: 280px;
+      height: 380px;
+    }
+    .flip-card-tilt {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 650ms cubic-bezier(0.18, 0.89, 0.32, 1.15);
+      border-radius: 22px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+    }
+    .flip-card-scene.is-flipped .flip-card-inner,
+    .flip-card-scene.hover-flip:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 22px;
+      overflow: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+      background-color: #27272a;
+      color: #f5f5f5;
+    }
+    .flip-card-glare {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: 22px;
+      opacity: 0;
+      transition: opacity 200ms ease-out;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 65%);
+      z-index: 15;
+    }
+    .flip-card-scene:hover .flip-card-glare {
+      opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .template-layer, .hero-wordmark, .driftwall-tile, .driftwall-plane {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light-surface-bright text-light-on-surface font-body antialiased selection:bg-kale-pink selection:text-light-primary">
+
+  <!-- ClickSpark Global Overlay -->
+  <canvas id="click-spark-canvas" class="pointer-events-none fixed inset-0 z-[9999]" aria-hidden="true" width="1280" height="1024"></canvas>
+
+  <div id="morph-stage" class="morph-stage stage-t1 min-h-[1024px] w-full flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- ==================== TEMPLATE 1: MINIMALIST HERO (IMAGE 1) ==================== -->
+    <section id="template-1" class="template-layer min-h-[1024px] w-full bg-light-surface-bright flex flex-col justify-between px-gutter-md md:px-page-margin py-gutter-lg" data-stitch-vh="min-h-[1024px]===min-h-screen">
+      <header class="max-w-7xl w-full mx-auto flex items-center justify-between gap-gutter-md">
+        <span class="font-headline text-title-lg text-light-on-surface tracking-tight" data-design-text-token="title-lg">BajLyu._</span>
+        <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">
+          Góc lưu trữ &amp; đọc sách cá nhân
+        </span>
+      </header>
+
+      <main class="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-gutter-lg py-gutter-xl">
+        <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">CAM ON VI DA DEN</p>
+
+        <h1 class="hero-wordmark font-display text-display-lg-mobile md:text-display-lg lg:text-[92px] lg:leading-none font-normal uppercase tracking-tight text-forest-hero text-balance" data-design-text-token="display-lg">
+          HANG CHUỘT CHŨI
+        </h1>
+
+        <p class="font-body text-body-lg text-light-on-surface-variant max-w-prose text-pretty" data-design-text-token="body-lg">CHUC BAN THANH CONG</p>
+
+        <button id="enter-burrow-btn" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" type="button" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-xl py-3.5 rounded-full bg-light-primary text-light-on-primary font-label text-label-lg transition-transform duration-state-change ease-state-change hover:bg-forest-hero active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2">
+          <span data-design-text-token="label-lg">Bước vào hang</span>
+          <span class="material-symbols-outlined text-[18px]" aria-hidden="true">south_east</span>
+        </button>
+      </main>
+
+      <footer class="max-w-7xl w-full mx-auto flex items-center justify-center pb-gutter-sm">
+        <button id="scroll-morph-cue" type="button" class="inline-flex items-center gap-gutter-xs font-label text-label-sm text-light-on-surface-variant hover:text-forest-hero transition-colors duration-state-change">
+          <span data-design-text-token="label-sm">Cuộn hoặc nhấn để khám phá tủ sách</span>
+          <span class="material-symbols-outlined text-[16px]" aria-hidden="true">arrow_downward</span>
+        </button>
+      </footer>
+    </section>
+
+    <!-- ==================== TEMPLATE 2: UNIFIED INTERACTIVE LIBRARY (SEARCH + LINESIDEBAR + DRIFTWALL + CURVEDLOOP) ==================== -->
+    <section id="template-2" class="template-layer min-h-[1024px] w-full bg-cream-surface text-light-on-surface flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+      <!-- Top App Bar -->
+      <header class="w-full bg-cream-surface/95 border-b border-light-outline-variant sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin py-gutter-md flex flex-wrap items-center justify-between gap-gutter-md">
+          <div class="flex items-center gap-gutter-md">
+            <span class="font-headline text-headline-md text-forest-hero tracking-tight" data-design-text-token="headline-md">
+              hang chuột chũi.
+            </span>
+            <span class="hidden sm:inline-flex items-center px-3 py-1 rounded-full bg-kale-pink text-light-primary font-label text-label-sm" data-design-text-token="label-sm">
+              Tủ sách tương tác
+            </span>
+          </div>
+
+          <nav aria-label="Điều hướng chính" class="flex items-center gap-gutter-sm md:gap-gutter-md">
+            <button id="back-to-hero-btn" type="button" class="inline-flex items-center gap-1.5 px-gutter-md py-2 rounded-full border border-light-outline-variant bg-light-surface-bright text-light-on-surface font-label text-label-sm hover:bg-light-surface-container transition-colors">
+              <span class="material-symbols-outlined text-[16px]" aria-hidden="true">north_west</span>
+              <span data-design-text-token="label-sm">Cửa hang</span>
+            </button>
+
+            <button id="open-settings-btn" type="button" class="inline-flex items-center gap-1.5 px-gutter-md py-2 rounded-full border border-light-outline-variant bg-light-surface-bright text-light-on-surface font-label text-label-sm hover:bg-light-secondary-container transition-colors">
+              <span class="material-symbols-outlined text-[16px]" aria-hidden="true">palette</span>
+              <span data-design-text-token="label-sm">Giao diện</span>
+            </button>
+
+            <button id="add-book-open-btn" type="button" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-2.5 rounded-full bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-forest-hero transition-colors">
+              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">bookmark_add</span>
+              <span data-design-text-token="label-lg">Lưu sách mới</span>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Unified Workspace -->
+      <main class="max-w-7xl w-full mx-auto px-gutter-md md:px-page-margin py-gutter-lg flex-1 flex flex-col gap-gutter-lg">
+
+        <!-- 1. Bright Search Bar above Running Books -->
+        <section id="tusach-search-section" class="relative z-30 w-full">
+          <div class="flex items-center w-full rounded-full bg-light-surface-bright text-light-on-surface shadow-lg border-2 border-kale-pink px-gutter-md py-2">
+            <span class="material-symbols-outlined text-[22px] text-forest-hero mr-2 flex-shrink-0" aria-hidden="true">search</span>
+            <input id="search-books-input" type="search" placeholder="Tìm tên truyện hoặc tên tác giả (ví dụ: Rừng Na Uy, Tô Hoài)..." aria-label="Tìm kiếm tên truyện hoặc tác giả" class="w-full border-0 bg-transparent text-body-lg text-light-on-surface placeholder:text-light-on-surface-variant focus:ring-0">
+            <button id="clear-search-btn" type="button" class="hidden ml-2 flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-light-surface-container text-light-on-surface-variant font-label text-label-sm hover:bg-light-surface-container-high transition-colors">
+              <span class="material-symbols-outlined text-[16px]" aria-hidden="true">close</span>
+              <span>Xoá</span>
+            </button>
+          </div>
+          <div id="tusach-search-results" class="hidden absolute left-0 right-0 mt-2 rounded-xl bg-light-surface-bright text-light-on-surface border border-light-outline-variant shadow-2xl overflow-hidden text-left z-50"></div>
+        </section>
+
+        <!-- 2. Split Showcase: Left LineSidebar Tag Selector + Right Full-Height 3D DriftWall -->
+        <section id="driftwall-strip-section" class="relative w-full rounded-xl bg-dark-surface border border-dark-outline-variant overflow-hidden flex flex-col lg:flex-row">
+          <aside id="line-sidebar-aside" aria-label="Chọn tag truyện" class="w-full lg:w-72 flex-shrink-0 bg-dark-surface border-b lg:border-b-0 lg:border-r border-dark-outline-variant p-gutter-lg md:p-gutter-xl flex flex-col justify-between gap-gutter-lg z-30">
+            <div class="flex flex-col gap-gutter-xs">
+              <span class="font-mono text-mono-sm uppercase tracking-wider text-kale-olive" data-design-text-token="mono-sm">Thể loại &amp; Tag</span>
+              <h2 class="font-headline text-headline-md text-light-surface-bright" data-design-text-token="headline-md">Chọn tag truyện</h2>
+            </div>
+
+            <nav id="line-sidebar-nav" class="line-sidebar-list" aria-label="Danh sách tag truyện"><button type="button" class="line-sidebar-item is-active"><span class="line-sidebar-tick" aria-hidden="true"></span><span class="line-sidebar-index">01</span><span class="line-sidebar-label">Tất cả</span></button><button type="button" class="line-sidebar-item"><span class="line-sidebar-tick" aria-hidden="true"></span><span class="line-sidebar-index">02</span><span class="line-sidebar-label">Tiểu thuyết</span></button><button type="button" class="line-sidebar-item"><span class="line-sidebar-tick" aria-hidden="true"></span><span class="line-sidebar-index">03</span><span class="line-sidebar-label">Văn học Việt</span></button><button type="button" class="line-sidebar-item"><span class="line-sidebar-tick" aria-hidden="true"></span><span class="line-sidebar-index">04</span><span class="line-sidebar-label">Triết lý</span></button><button type="button" class="line-sidebar-item"><span class="line-sidebar-tick" aria-hidden="true"></span><span class="line-sidebar-index">05</span><span class="line-sidebar-label">Giả tưởng</span></button><button type="button" class="line-sidebar-item"><span class="line-sidebar-tick" aria-hidden="true"></span><span class="line-sidebar-index">06</span><span class="line-sidebar-label">Lãng mạn</span></button><button type="button" class="line-sidebar-item"><span class="line-sidebar-tick" aria-hidden="true"></span><span class="line-sidebar-index">07</span><span class="line-sidebar-label">Phiêu lưu</span></button></nav>
+
+            <div class="pt-gutter-md border-t border-dark-outline-variant/60 flex items-center justify-between gap-gutter-sm">
+              <span class="font-label text-label-sm text-dark-on-surface-variant" data-design-text-token="label-sm">Đang hiển thị</span>
+              <span id="active-tag-count" class="font-mono text-mono-sm px-2.5 py-0.5 rounded-full bg-dark-surface-container text-kale-pink tabular-nums" data-design-text-token="mono-sm">9 cuốn</span>
+            </div>
+          </aside>
+
+          <div class="relative flex-1 min-w-0">
+            <div id="tusach-driftwall-viewport" class="driftwall-viewport" aria-label="Dòng sách DriftWall đang chạy">
+              <div id="tusach-driftwall-plane" class="driftwall-plane"><div class="driftwall-col" style="transform: translate3d(0px, -9.4px, -66px);"><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Rừng Na Uy"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Hoàng Tử Bé"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Rừng Na Uy"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Hoàng Tử Bé"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div></div><div class="driftwall-col" style="transform: translate3d(0px, -51.9px, -44px);"><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Mắt Biếc"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Mắt Biếc"><div class="tile-overlay"></div></div></div><div class="driftwall-col" style="transform: translate3d(0px, -1114.5px, -22px);"><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Mắt Biếc"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Kẻ Tìm Đường"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Rừng Na Uy"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Mắt Biếc"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Kẻ Tìm Đường"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Rừng Na Uy"><div class="tile-overlay"></div></div></div><div class="driftwall-col" style="transform: translate3d(0px, -1157px, 0px);"><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Mắt Biếc"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Kẻ Tìm Đường"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Rừng Na Uy"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Hoàng Tử Bé"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Mắt Biếc"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Kẻ Tìm Đường"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Rừng Na Uy"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Hoàng Tử Bé"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div></div><div class="driftwall-col" style="transform: translate3d(0px, -479.6px, 22px);"><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Kẻ Tìm Đường"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Rừng Na Uy"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Hoàng Tử Bé"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Kẻ Tìm Đường"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Rừng Na Uy"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Hoàng Tử Bé"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div></div><div class="driftwall-col" style="transform: translate3d(0px, -522.1px, 44px);"><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Hoàng Tử Bé"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Hoàng Tử Bé"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Dế Mèn Phiêu Lưu Ký"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div></div><div class="driftwall-col" style="transform: translate3d(0px, -1584.7px, 66px);"><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Mắt Biếc"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Kẻ Tìm Đường"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ" alt="Số Đỏ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg" alt="Chuyến Tàu Đêm"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB" alt="Khu Vườn Ngôn Từ"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Nhà Giả Kim"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw" alt="Mắt Biếc"><div class="tile-overlay"></div></div><div class="driftwall-tile"><img src="https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA" alt="Kẻ Tìm Đường"><div class="tile-overlay"></div></div></div></div>
+            </div>
+
+            <div class="pointer-events-none absolute top-gutter-lg left-gutter-lg z-30 flex flex-col gap-gutter-xs max-w-md">
+              <span id="driftwall-tag-badge" class="self-start inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-kale-pink text-light-primary font-label text-label-sm shadow-md" data-design-text-token="label-sm">
+                <span class="material-symbols-outlined text-[15px]" aria-hidden="true">motion_play</span>
+                <span>Dòng sách đang chạy · Tất cả</span>
+              </span>
+              <h2 class="font-headline text-headline-md text-light-surface-bright text-balance" data-design-text-token="headline-md">
+                Bấm vào bất kỳ quyển sách nào đang trôi để lật thẻ FlipCard &amp; xem chi tiết
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. CurvedLoop Author Marquee -->
+        <section id="curved-author-section" class="relative w-full rounded-xl bg-dark-surface border border-dark-outline-variant overflow-hidden py-gutter-md">
+          <div class="px-gutter-lg flex flex-wrap items-center justify-between gap-gutter-sm mb-1">
+            <span class="font-mono text-mono-sm uppercase tracking-wider text-kale-olive" data-design-text-token="mono-sm">
+              Tác giả nổi bật · Bấm vào tên để lọc truyện
+            </span>
+            <button id="reset-author-filter-btn" type="button" class="hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-kale-pink text-light-primary font-label text-label-sm hover:opacity-90 transition-opacity">
+              <span class="material-symbols-outlined text-[15px]" aria-hidden="true">close</span>
+              <span id="reset-author-label">Đang lọc tác giả</span>
+            </button>
+          </div>
+
+          <div id="curved-loop-wrapper" class="curved-loop-mask w-full select-none overflow-hidden cursor-grab active:cursor-grabbing">
+            <svg id="curved-loop-svg" viewBox="0 0 1440 210" class="w-full h-36 md:h-44 block overflow-visible" aria-label="Dòng chữ cong chạy tên các tác giả">
+              <defs>
+                <path id="curved-loop-path" d="M -120,75 Q 720,215 1560,75" fill="none"></path>
+              </defs>
+              <text font-family="Instrument Sans, sans-serif" font-size="56" font-weight="700" letter-spacing="3" fill="#99b966">
+                <textPath id="curved-loop-textpath" href="#curved-loop-path" startOffset="-2505.2px"><tspan class="curved-author-tspan">Haruki Murakami</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Antoine de Saint-Exupéry</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Tô Hoài</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Vũ Trọng Phụng</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Miyazawa Kenji</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Shinkai Makoto</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Paulo Coelho</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Nguyễn Nhật Ánh</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Phan Văn Trường</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Haruki Murakami</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Antoine de Saint-Exupéry</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Tô Hoài</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Vũ Trọng Phụng</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Miyazawa Kenji</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Shinkai Makoto</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Paulo Coelho</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Nguyễn Nhật Ánh</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Phan Văn Trường</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Haruki Murakami</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Antoine de Saint-Exupéry</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Tô Hoài</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Vũ Trọng Phụng</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Miyazawa Kenji</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Shinkai Makoto</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Paulo Coelho</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Nguyễn Nhật Ánh</tspan><tspan fill="#99b966">   ✦   </tspan><tspan class="curved-author-tspan">Phan Văn Trường</tspan><tspan fill="#99b966">   ✦   </tspan></textPath>
+              </text>
+            </svg>
+          </div>
+
+          <!-- Matching Author Stories Panel -->
+          <div id="author-books-panel" class="hidden px-gutter-lg pt-gutter-md pb-gutter-sm border-t border-dark-outline-variant/60">
+            <div class="flex items-center justify-between gap-gutter-md mb-gutter-md">
+              <h3 id="author-books-heading" class="font-headline text-headline-md text-light-surface-bright" data-design-text-token="headline-md">
+                Truyện của tác giả
+              </h3>
+              <span id="author-books-count" class="font-mono text-mono-sm px-2.5 py-0.5 rounded-full bg-dark-surface-container text-kale-pink tabular-nums">0 cuốn</span>
+            </div>
+            <div id="author-books-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-md"></div>
+          </div>
+        </section>
+
+      </main>
+    </section>
+  </div>
+
+  <!-- Book Detail + 3D FlipCard Modal -->
+  <div id="book-detail-modal" class="hidden fixed inset-0 z-50 bg-light-on-surface/65 flex items-center justify-center p-gutter-md" role="dialog" aria-modal="true" aria-labelledby="detail-book-title">
+    <div class="bg-light-surface-bright rounded-xl max-w-3xl w-full p-gutter-lg md:p-gutter-xl border border-light-outline-variant shadow-2xl flex flex-col gap-gutter-lg">
+      <div class="flex items-center justify-between gap-gutter-md">
+        <div class="flex items-center gap-gutter-sm">
+          <span id="detail-status-badge" class="inline-flex items-center px-3 py-1 rounded-full bg-light-secondary-container text-light-on-secondary-container font-label text-label-sm" data-design-text-token="label-sm">
+            Đang đọc
+          </span>
+          <span id="detail-genre-badge" class="inline-flex items-center px-3 py-1 rounded-full bg-light-surface-container text-light-on-surface-variant font-label text-label-sm" data-design-text-token="label-sm">
+            Tiểu thuyết
+          </span>
+        </div>
+        <button id="close-detail-modal-btn" type="button" aria-label="Đóng chi tiết sách" class="w-9 h-9 rounded-full bg-light-surface-container flex items-center justify-center text-light-on-surface hover:bg-light-surface-container-high">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg items-center">
+        <!-- Left: 3D FlipCard -->
+        <div class="md:col-span-5 flex flex-col items-center gap-gutter-sm">
+          <div id="modal-flip-scene" class="flip-card-scene hover-flip">
+            <div id="modal-flip-tilt" class="flip-card-tilt">
+              <div class="flip-card-inner">
+                <div id="modal-flip-glare" class="flip-card-glare"></div>
+                <div class="flip-card-face flip-card-front bg-dark-surface">
+                  <img id="detail-book-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ" alt="Bìa sách" class="w-full h-full object-cover">
+                </div>
+                <div class="flip-card-face flip-card-back p-6 flex flex-col justify-between">
+                  <div class="flex flex-col gap-3">
+                    <span id="flip-back-genre" class="self-start px-2.5 py-0.5 rounded-full bg-plum-overlay text-light-on-primary font-label text-label-sm">Tiểu thuyết</span>
+                    <h3 id="flip-back-title" class="font-headline text-headline-md leading-tight">Tên sách</h3>
+                    <p id="flip-back-author" class="font-body text-body-md text-kale-pink">Tác giả</p>
+                    <p id="flip-back-synopsis" class="font-body text-body-md opacity-90 line-clamp-5 mt-1">Văn án tác phẩm.</p>
+                  </div>
+                  <div class="pt-3 border-t border-light-outline/30 flex items-center justify-between">
+                    <span class="font-label text-label-sm opacity-80">Di chuột hoặc bấm để lật</span>
+                    <span id="flip-back-rating" class="font-mono text-mono-sm text-kale-pink">5/5 ★</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button id="manual-flip-btn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-light-surface-container text-light-primary font-label text-label-sm hover:bg-light-secondary-container transition-colors">
+            <span class="material-symbols-outlined text-[16px]" aria-hidden="true">360</span>
+            <span>Lật thẻ xem văn án</span>
+          </button>
+        </div>
+
+        <!-- Right: Details, Rating & Notes -->
+        <div class="md:col-span-7 flex flex-col gap-gutter-md">
+          <div>
+            <h2 id="detail-book-title" class="font-headline text-headline-lg-mobile md:text-headline-lg text-light-on-surface" data-design-text-token="headline-lg">
+              Tên sách
+            </h2>
+            <p id="detail-book-author" class="font-title text-title-md text-light-on-surface-variant mt-1" data-design-text-token="title-md">
+              Tác giả
+            </p>
+          </div>
+
+          <div class="flex items-center gap-gutter-sm">
+            <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Đánh giá:</span>
+            <div id="detail-star-row" class="inline-flex items-center gap-1" aria-label="Đánh giá sao"></div>
+            <span id="detail-rating-text" class="font-mono text-mono-sm text-light-on-surface-variant tabular-nums" data-design-text-token="mono-sm">5/5</span>
+          </div>
+
+          <div class="flex flex-col gap-gutter-xs">
+            <span class="font-label text-label-sm text-light-on-surface" data-design-text-token="label-sm">Văn án</span>
+            <p id="detail-book-synopsis" class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Mô tả nội dung sách.
+            </p>
+          </div>
+
+          <label class="flex flex-col gap-gutter-xs">
+            <span class="font-label text-label-sm text-light-on-surface" data-design-text-token="label-sm">Ghi chú &amp; cảm nhận cá nhân</span>
+            <textarea id="detail-book-notes" rows="2" placeholder="Viết vài dòng trích dẫn hoặc cảm nhận của bạn..." class="rounded-lg border-light-outline-variant bg-light-surface text-body-md px-3 py-2 focus:border-light-primary focus:ring-light-primary"></textarea>
+          </label>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-gutter-md pt-gutter-md border-t border-light-outline-variant">
+        <div class="flex items-center gap-gutter-xs">
+          <span class="font-label text-label-sm text-light-on-surface-variant mr-1" data-design-text-token="label-sm">Chuyển kệ:</span>
+          <button type="button" data-detail-status="want" class="detail-status-btn px-3 py-1.5 rounded-full font-label text-label-sm bg-light-surface-container text-light-on-surface">Muốn đọc</button>
+          <button type="button" data-detail-status="reading" class="detail-status-btn px-3 py-1.5 rounded-full font-label text-label-sm bg-light-surface-container text-light-on-surface">Đang đọc</button>
+          <button type="button" data-detail-status="done" class="detail-status-btn px-3 py-1.5 rounded-full font-label text-label-sm bg-light-surface-container text-light-on-surface">Đã xong</button>
+        </div>
+        <button id="save-detail-btn" type="button" class="px-gutter-lg py-2.5 rounded-full bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-forest-hero">
+          <span data-design-text-token="label-lg">Lưu thay đổi</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appearance & Color Settings Modal -->
+  <div id="settings-modal" class="hidden fixed inset-0 z-50 bg-light-on-surface/55 flex items-center justify-center p-gutter-md" role="dialog" aria-modal="true" aria-labelledby="settings-modal-title">
+    <div class="bg-light-surface-bright rounded-xl max-w-lg w-full p-gutter-lg border border-light-outline-variant shadow-xl flex flex-col gap-gutter-lg">
+      <div class="flex items-center justify-between">
+        <h2 id="settings-modal-title" class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Cài đặt giao diện &amp; màu sắc</h2>
+        <button id="close-settings-btn" type="button" aria-label="Đóng" class="w-9 h-9 rounded-full bg-light-surface-container flex items-center justify-center text-light-on-surface hover:bg-light-surface-container-high">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-gutter-sm">
+        <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Bảng màu không gian đọc</span>
+        <div class="grid grid-cols-2 gap-gutter-sm">
+          <button type="button" data-theme-preset="kale" class="theme-preset-btn p-gutter-md rounded-lg border-2 border-light-primary bg-cream-surface text-left flex items-center gap-gutter-sm">
+            <span class="w-6 h-6 rounded-full bg-kale-pink border border-light-outline-variant flex-shrink-0"></span>
+            <div>
+              <p class="font-label text-label-sm text-light-on-surface">Hồng Kale &amp; Kem</p>
+              <p class="font-body text-[11px] text-light-on-surface-variant">Mặc định tươi vui</p>
+            </div>
+          </button>
+          <button type="button" data-theme-preset="plum" class="theme-preset-btn p-gutter-md rounded-lg border border-light-outline-variant bg-dark-surface text-left flex items-center gap-gutter-sm">
+            <span class="w-6 h-6 rounded-full bg-plum-overlay border border-dark-outline-variant flex-shrink-0"></span>
+            <div>
+              <p class="font-label text-label-sm text-dark-on-surface">Đêm Mận Chín</p>
+              <p class="font-body text-[11px] text-dark-on-surface-variant">Chế độ đọc ban đêm</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between gap-gutter-md pt-gutter-sm border-t border-light-outline-variant">
+        <div>
+          <p class="font-label text-label-lg text-light-on-surface" data-design-text-token="label-lg">Tốc độ dòng sách chạy (DriftWall)</p>
+          <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Điều chỉnh nhịp trôi của các quyển truyện</p>
+        </div>
+        <select id="setting-drift-speed" class="rounded-full border-light-outline-variant bg-light-surface text-label-sm px-3 py-1.5 focus:border-light-primary focus:ring-light-primary">
+          <option value="30">Chậm rãi</option>
+          <option value="60" selected="">Tiêu chuẩn (60)</option>
+          <option value="110">Nhanh</option>
+          <option value="0">Tạm dừng</option>
+        </select>
+      </div>
+
+      <div class="flex justify-end pt-gutter-sm">
+        <button id="done-settings-btn" type="button" class="px-gutter-lg py-2.5 rounded-full bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-forest-hero">
+          <span data-design-text-token="label-lg">Áp dụng</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Book Modal -->
+  <div id="add-book-modal" class="hidden fixed inset-0 z-50 bg-light-on-surface/50 flex items-center justify-center p-gutter-md" role="dialog" aria-modal="true" aria-labelledby="add-modal-title">
+    <form id="add-book-form" class="bg-light-surface-bright rounded-xl max-w-md w-full p-gutter-lg border border-light-outline-variant shadow-xl flex flex-col gap-gutter-md">
+      <div class="flex items-center justify-between">
+        <h2 id="add-modal-title" class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Lưu sách mới</h2>
+        <button id="close-add-modal-btn" type="button" aria-label="Đóng" class="w-9 h-9 rounded-full bg-light-surface-container flex items-center justify-center text-light-on-surface hover:bg-light-surface-container-high">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <label class="flex flex-col gap-1">
+        <span class="font-label text-label-sm text-light-on-surface" data-design-text-token="label-sm">Tên sách</span>
+        <input id="new-title" type="text" required="" placeholder="Ví dụ: Tuổi Thơ Dữ Dội" class="rounded-lg border-light-outline-variant bg-light-surface text-body-md px-3 py-2 focus:border-light-primary focus:ring-light-primary">
+      </label>
+
+      <label class="flex flex-col gap-1">
+        <span class="font-label text-label-sm text-light-on-surface" data-design-text-token="label-sm">Tác giả</span>
+        <input id="new-author" type="text" required="" placeholder="Ví dụ: Phùng Quán" class="rounded-lg border-light-outline-variant bg-light-surface text-body-md px-3 py-2 focus:border-light-primary focus:ring-light-primary">
+      </label>
+
+      <div class="grid grid-cols-2 gap-gutter-sm">
+        <label class="flex flex-col gap-1">
+          <span class="font-label text-label-sm text-light-on-surface" data-design-text-token="label-sm">Thể loại (Tag)</span>
+          <select id="new-genre" class="rounded-lg border-light-outline-variant bg-light-surface text-body-md px-3 py-2 focus:border-light-primary focus:ring-light-primary">
+            <option value="Tiểu thuyết">Tiểu thuyết</option>
+            <option value="Văn học Việt">Văn học Việt</option>
+            <option value="Triết lý">Triết lý</option>
+            <option value="Giả tưởng">Giả tưởng</option>
+            <option value="Lãng mạn">Lãng mạn</option>
+            <option value="Phiêu lưu">Phiêu lưu</option>
+          </select>
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="font-label text-label-sm text-light-on-surface" data-design-text-token="label-sm">Kệ đọc</span>
+          <select id="new-status" class="rounded-lg border-light-outline-variant bg-light-surface text-body-md px-3 py-2 focus:border-light-primary focus:ring-light-primary">
+            <option value="want">Muốn đọc</option>
+            <option value="reading">Đang đọc</option>
+            <option value="done">Đã xong</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="flex flex-col gap-1">
+        <span class="font-label text-label-sm text-light-on-surface" data-design-text-token="label-sm">Văn án ngắn</span>
+        <textarea id="new-synopsis" rows="2" placeholder="Tóm tắt nội dung cuốn sách..." class="rounded-lg border-light-outline-variant bg-light-surface text-body-md px-3 py-2 focus:border-light-primary focus:ring-light-primary"></textarea>
+      </label>
+
+      <div class="flex items-center justify-end gap-gutter-sm pt-gutter-sm">
+        <button id="cancel-add-btn" type="button" class="px-gutter-md py-2.5 rounded-full border border-light-outline-variant text-light-on-surface font-label text-label-lg">
+          <span data-design-text-token="label-lg">Hủy</span>
+        </button>
+        <button type="submit" class="px-gutter-lg py-2.5 rounded-full bg-light-primary text-light-on-primary font-label text-label-lg hover:bg-forest-hero">
+          <span data-design-text-token="label-lg">Lưu vào tủ</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script data-stitch-original-script="2726cb9d0ce3db02===../../images/book_cover_1.jpg|||03683087c6b99b02===../../images/book_cover_2.jpg|||eb5cb5adc99dcd08===../../images/book_cover_3.jpg|||571939459e22c10d===../../images/book_cover_4.jpg|||bdcb089518c3c471===../../images/book_cover_5.jpg|||5f0dbcd6cf60c5f7===../../images/book_cover_6.jpg|||2726cb9d0ce3db02===../../images/book_cover_1.jpg|||03683087c6b99b02===../../images/book_cover_2.jpg|||eb5cb5adc99dcd08===../../images/book_cover_3.jpg">
+    (function () {
+      const DEFAULT_BOOKS = [
+        { id: 'b1', title: 'Rừng Na Uy', author: 'Haruki Murakami', genre: 'Tiểu thuyết', rating: 5, synopsis: 'Câu chuyện về tình yêu, sự mất mát và tuổi trẻ đầy chênh vênh của Watanabe Toru giữa Tokyo thập niên 60.', notes: 'Đọc lại mỗi mùa thu.', image: 'https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ', status: 'reading' },
+        { id: 'b2', title: 'Hoàng Tử Bé', author: 'Antoine de Saint-Exupéry', genre: 'Triết lý', rating: 5, synopsis: 'Hành trình qua các tiểu hành tinh của cậu bé tóc vàng để nhận ra điều cốt lõi chỉ có thể nhìn bằng trái tim.', notes: 'Cuốn sách gối đầu giường.', image: 'https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw', status: 'done' },
+        { id: 'b3', title: 'Dế Mèn Phiêu Lưu Ký', author: 'Tô Hoài', genre: 'Văn học Việt', rating: 4, synopsis: 'Chuyến phiêu lưu qua thế giới côn trùng đầy màu sắc, từ kiêu ngạo đến trưởng thành và nghĩa tình.', notes: '', image: 'https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA', status: 'want' },
+        { id: 'b4', title: 'Số Đỏ', author: 'Vũ Trọng Phụng', genre: 'Văn học Việt', rating: 5, synopsis: 'Bức tranh châm biếm sắc sảo xã hội thành thị qua bước đường thăng tiến kỳ lạ của Xuân Tóc Đỏ.', notes: '', image: 'https://lh3.googleusercontent.com/aida/ALJJyrBNUT-36d7SHkw-dmPCpzb8eQPaRb8eebhwpV_xEcWBBtrgGkp_prS6gxcC_dKCKa93E4_kRPOmnTVm-lQYvgJGmnx8zA9yPOTN6LLNroygDnNh0Ts6IfLO_bWGTAAsH0kF7PHsC2oFnseeJGGp5q-iB7jgNWouhq0z8PzIKumgIZKEtnq4ri1P1cCsZW0641FkSfqFBzsg3H7-qmahbuSrYOTOsR9N2p7EkN1Gvr7r2PW7FQilrQ', status: 'want' },
+        { id: 'b5', title: 'Chuyến Tàu Đêm', author: 'Miyazawa Kenji', genre: 'Giả tưởng', rating: 4, synopsis: 'Giovanni và Campanella cùng bước lên đoàn tàu băng qua Dải Ngân Hà lấp lánh ánh sao.', notes: 'Đang đọc chương 6.', image: 'https://lh3.googleusercontent.com/aida/ALJJyrB6DEyanx9nasL29ZuSPO1sM8t01Jp9XVWiAIiKjR-Iy8AKLEr6NV7_ONwA4XYJCqmkFeLY0c9p6TIHCsWpn8ZcbvfZu9XM9YNj1ahUwxwHs35mccZ4S4MbC1IzfAvZKzXeve8IjFzQjSipBaCKp80Q2SlTQjUHMOgMolrezpcant1L0ChGZt5Cdz4LtJjv3qt2ZrhvQxSdM8jOzACzQu04SVwCTPyR6Nw3AC0DCERLhtu_27k0cg', status: 'reading' },
+        { id: 'b6', title: 'Khu Vườn Ngôn Từ', author: 'Shinkai Makoto', genre: 'Lãng mạn', rating: 4, synopsis: 'Những buổi sáng mưa rơi trong công viên Shinjuku, nơi hai tâm hồn lạc lối tìm thấy sự đồng điệu.', notes: '', image: 'https://lh3.googleusercontent.com/aida/ALJJyrDFKsAh2VB-rTxccBMJ1sty4CJ5PXixGSX91KcLOHU53p5okUTAsMXGnXXIJVMQyOrr9ZNYcg_ngdBX7Zw1GoeFBxhsqabE7SmbjZZi1pTOmoRBw8GzC_WaT17pHKnD04oVkcXbNd3nrBRU1QIQHvcMoiIIiVBk6rZ8MgoKXPTbyGfELTYVRsGVWa2c1VY2ADctA9DLqn7FFdhz_TdUMk2yMYN0zDBu1rSUdRoUBEApCMLoBdaB', status: 'done' },
+        { id: 'b7', title: 'Nhà Giả Kim', author: 'Paulo Coelho', genre: 'Phiêu lưu', rating: 5, synopsis: 'Chàng chăn cừu Santiago lên đường tìm kho báu ở Kim Tự Tháp và học cách lắng nghe ngôn ngữ vũ trụ.', notes: 'Rất truyền cảm hứng.', image: 'https://lh3.googleusercontent.com/aida/ALJJyrAnYQLwjmJc5Ti-eLxrRndI2iz-ajxL9t3Ruo6hXkldtrlKGt5q6kuMuQB5aCmJ9vwYCXrSwMeeOpw2ur-iz94BM9Nw0V5xxmwHLQuExtqGyMVeHQdhoeBtZAB9K3IEC3i7jgxcWRC5NJdAD86gN9u-UA2wIAcQ85ozMoSVQlfgCDwOxTJuxkfR4fDUqIzDH2pF3qjimeGc9frm2kFU-sy4qu7ssAuGQ9YO6wNRVrVujt72ohXfyQ', status: 'done' },
+        { id: 'b8', title: 'Mắt Biếc', author: 'Nguyễn Nhật Ánh', genre: 'Lãng mạn', rating: 4, synopsis: 'Mối tình đơn phương lặng lẽ của Ngạn dành cho đôi mắt biếc của Hà Lan từ làng Đo Đo.', notes: '', image: 'https://lh3.googleusercontent.com/aida/ALJJyrClEBvf8EBZvFEGbc-9u_ASvT661X82uxTbkX8Wi2kne9FPmWtrrVuYyB7P1S-irbzuNdUkBkj4o9rPdIdmObX4YhNY4G3mjHZsWfKyvejKQGrrkS4De3bsPe20wYFUaRI83c8mNe_lo0gh0d2ZaDrM2NDY2AvK-RAuwp1BopyH5ctTS3MCEAwHsUc7oADewJFqMlQPnQ6oW0dCZRHEc05Abp0BvOTlvBQ9IQtAo_w2mM0MvL_BNw', status: 'want' },
+        { id: 'b9', title: 'Kẻ Tìm Đường', author: 'Phan Văn Trường', genre: 'Triết lý', rating: 4, synopsis: 'Những chiêm nghiệm thực tế về nghề nghiệp, văn hóa và hành trình giữ vững bản sắc cá nhân.', notes: '', image: 'https://lh3.googleusercontent.com/aida/ALJJyrBKMMiyT5m6CR_PF5SbFyZxlirT5c_WmssiCuMpCT39WiQlq2T2M1KEebxda7U3PWkC1mtyJWfgM7Sg-cnkiMKcYklrar2HAe6fWp5OVoTvam-dmXi4Aq9pRA1KI8lGzvPS266LHnIs0GYCZYiLtxzazG3ypL8zpjuZo2YoCZhkNt4kH15ggFStsf8_mz9d5SPg6d-9L5UkdxRc73_NQuyfZ5v3Cufai2lgIwFS6YG3ttA37dpjEA', status: 'want' }
+      ];
+
+      function loadBooks() {
+        try {
+          const raw = localStorage.getItem('hang_chuot_chui_books_v2');
+          if (raw) return JSON.parse(raw);
+        } catch (err) {}
+        return DEFAULT_BOOKS.slice();
+      }
+      function saveBooks(list) {
+        try { localStorage.setItem('hang_chuot_chui_books_v2', JSON.stringify(list)); } catch (err) {}
+      }
+
+      let books = loadBooks();
+      let driftBaseSpeed = 60;
+      let currentTag = 'Tất cả';
+
+      const STATUS_META = {
+        want: { label: 'Muốn đọc', badgeClass: 'bg-light-secondary-container text-light-on-secondary-container' },
+        reading: { label: 'Đang đọc', badgeClass: 'bg-light-tertiary-container text-light-on-tertiary-container' },
+        done: { label: 'Đã xong', badgeClass: 'bg-light-primary text-light-on-primary' }
+      };
+
+      // ==================== 1. Morph Transition (Template 1 <-> Template 2) ====================
+      const stage = document.getElementById('morph-stage');
+      function goToTemplate2() {
+        stage.classList.remove('stage-t1');
+        stage.classList.add('stage-t2');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      function goToTemplate1() {
+        stage.classList.remove('stage-t2');
+        stage.classList.add('stage-t1');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      document.getElementById('enter-burrow-btn').addEventListener('click', goToTemplate2);
+      document.getElementById('scroll-morph-cue').addEventListener('click', goToTemplate2);
+      document.getElementById('back-to-hero-btn').addEventListener('click', goToTemplate1);
+
+      window.addEventListener('wheel', function (e) {
+        if (stage.classList.contains('stage-t1') && e.deltaY > 36) goToTemplate2();
+      }, { passive: true });
+
+      // ==================== 2. DriftWall 3D Engine ====================
+      const driftPlane = document.getElementById('tusach-driftwall-plane');
+      const driftViewport = document.getElementById('tusach-driftwall-viewport');
+      let colStates = [];
+
+      function renderDriftPool(pool, badgeLabel, countNum) {
+        const countEl = document.getElementById('active-tag-count');
+        if (countEl) countEl.textContent = countNum + ' cuốn';
+        const badgeEl = document.getElementById('driftwall-tag-badge');
+        if (badgeEl) {
+          const spanText = badgeEl.querySelector('span:last-child');
+          if (spanText) spanText.textContent = badgeLabel;
+        }
+        driftPlane.innerHTML = '';
+        colStates = [];
+        for (let c = 0; c < 7; c++) {
+          const colEl = document.createElement('div');
+          colEl.className = 'driftwall-col';
+          const colBooks = [];
+          for (let i = 0; i < 6; i++) {
+            colBooks.push(pool[(c * 2 + i) % pool.length]);
+          }
+          colBooks.concat(colBooks).forEach(function (book) {
+            const tile = document.createElement('div');
+            tile.className = 'driftwall-tile';
+            tile.innerHTML = '<img src="' + book.image + '" alt="' + book.title + '" /><div class="tile-overlay"></div>';
+            tile.addEventListener('click', function () { openBookDetail(book.id); });
+            colEl.appendChild(tile);
+          });
+          driftPlane.appendChild(colEl);
+          const factor = 1 + ((c % 2 === 0 ? 1 : -1) * 0.55 * 0.35) + (c * 0.08);
+          const loopHeight = colBooks.length * (262 + 28);
+          colStates.push({ el: colEl, offset: (c * 85) % loopHeight, factor: factor, loopHeight: loopHeight, depthZ: (c - 3) * 22 });
+        }
+      }
+
+      function rebuildDriftWall(tag) {
+        currentTag = tag || 'Tất cả';
+        const filtered = currentTag === 'Tất cả'
+          ? books
+          : books.filter(function (b) { return (b.genre || '').toLowerCase() === currentTag.toLowerCase(); });
+        const pool = filtered.length > 0 ? filtered : books;
+        renderDriftPool(pool, 'Dòng sách đang chạy · ' + currentTag, filtered.length);
+      }
+      rebuildDriftWall('Tất cả');
+
+      let lastT = performance.now();
+      let driftPaused = false;
+      driftViewport.addEventListener('mouseenter', function () { driftPaused = true; });
+      driftViewport.addEventListener('mouseleave', function () {
+        driftPaused = false;
+        driftPlane.style.transform = 'rotateX(16deg) rotateY(-28deg)';
+      });
+      driftViewport.addEventListener('mousemove', function (e) {
+        const rect = driftViewport.getBoundingClientRect();
+        const nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        const ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+        driftPlane.style.transform = 'rotateX(' + (16 - ny * 5).toFixed(1) + 'deg) rotateY(' + (-28 + nx * 7).toFixed(1) + 'deg)';
+      });
+      function driftTick(now) {
+        const dt = Math.min((now - lastT) / 1000, 0.05);
+        lastT = now;
+        const mult = driftPaused ? 0.15 : 1;
+        for (let i = 0; i < colStates.length; i++) {
+          const st = colStates[i];
+          st.offset = (st.offset + driftBaseSpeed * st.factor * mult * dt) % st.loopHeight;
+          st.el.style.transform = 'translate3d(0, -' + st.offset.toFixed(1) + 'px, ' + st.depthZ + 'px)';
+        }
+        requestAnimationFrame(driftTick);
+      }
+      requestAnimationFrame(driftTick);
+
+      // ==================== 3. LineSidebar Tag Selector ====================
+      const TAG_ITEMS = ['Tất cả', 'Tiểu thuyết', 'Văn học Việt', 'Triết lý', 'Giả tưởng', 'Lãng mạn', 'Phiêu lưu'];
+      const sidebarNav = document.getElementById('line-sidebar-nav');
+      let activeTagIndex = 0;
+
+      TAG_ITEMS.forEach(function (label, idx) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'line-sidebar-item' + (idx === activeTagIndex ? ' is-active' : '');
+        btn.innerHTML =
+          '<span class="line-sidebar-tick" aria-hidden="true"></span>' +
+          '<span class="line-sidebar-index">0' + (idx + 1) + '</span>' +
+          '<span class="line-sidebar-label">' + label + '</span>';
+        btn.addEventListener('click', function () {
+          activeTagIndex = idx;
+          sidebarNav.querySelectorAll('.line-sidebar-item').forEach(function (el, i) {
+            el.classList.toggle('is-active', i === activeTagIndex);
+          });
+          document.getElementById('reset-author-filter-btn').classList.add('hidden');
+          document.getElementById('author-books-panel').classList.add('hidden');
+          rebuildDriftWall(label);
+        });
+        sidebarNav.appendChild(btn);
+      });
+
+      sidebarNav.addEventListener('mousemove', function (e) {
+        sidebarNav.querySelectorAll('.line-sidebar-item').forEach(function (item) {
+          const rect = item.getBoundingClientRect();
+          const dist = Math.abs(e.clientY - (rect.top + rect.height / 2));
+          const t = dist < 100 ? 0.5 * (1 + Math.cos(Math.PI * (dist / 100))) : 0;
+          item.style.transform = 'translateX(' + (t * 30).toFixed(1) + 'px)';
+          const tick = item.querySelector('.line-sidebar-tick');
+          if (tick && !item.classList.contains('is-active')) {
+            tick.style.transform = 'scaleX(' + (0.5 + t * 0.5).toFixed(2) + ')';
+          }
+        });
+      });
+      sidebarNav.addEventListener('mouseleave', function () {
+        sidebarNav.querySelectorAll('.line-sidebar-item').forEach(function (item) {
+          item.style.transform = 'translateX(0px)';
+          const tick = item.querySelector('.line-sidebar-tick');
+          if (tick && !item.classList.contains('is-active')) {
+            tick.style.transform = 'scaleX(0.5)';
+          }
+        });
+      });
+
+      // ==================== 4. Search Bar ====================
+      const searchInputEl = document.getElementById('search-books-input');
+      const searchResultsEl = document.getElementById('tusach-search-results');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+
+      function renderSearchDropdown(q) {
+        const trimmed = (q || '').trim().toLowerCase();
+        if (!trimmed) {
+          searchResultsEl.classList.add('hidden');
+          searchResultsEl.innerHTML = '';
+          clearSearchBtn.classList.add('hidden');
+          return;
+        }
+        clearSearchBtn.classList.remove('hidden');
+        const matches = books.filter(function (b) {
+          return b.title.toLowerCase().indexOf(trimmed) !== -1 || b.author.toLowerCase().indexOf(trimmed) !== -1;
+        });
+        if (!matches.length) {
+          searchResultsEl.innerHTML = '<div class="px-gutter-md py-4 font-body text-body-md text-light-on-surface-variant">Không tìm thấy truyện hoặc tác giả phù hợp.</div>';
+          searchResultsEl.classList.remove('hidden');
+          return;
+        }
+        searchResultsEl.innerHTML = matches.slice(0, 6).map(function (b) {
+          const meta = STATUS_META[b.status] || STATUS_META.want;
+          return '<button type="button" data-search-book="' + b.id + '" class="w-full flex items-center justify-between gap-gutter-md px-gutter-md py-3 hover:bg-light-surface-container transition-colors border-b border-light-outline-variant last:border-b-0 text-left">' +
+            '<div class="flex items-center gap-gutter-md min-w-0">' +
+              '<img src="' + b.image + '" alt="' + b.title + '" class="w-10 h-14 object-cover rounded-md flex-shrink-0" />' +
+              '<div class="min-w-0">' +
+                '<div class="font-title text-title-sm text-light-on-surface truncate">' + b.title + '</div>' +
+                '<div class="font-body text-body-sm text-light-on-surface-variant truncate">' + b.author + '</div>' +
+              '</div>' +
+            '</div>' +
+            '<span class="flex-shrink-0 inline-flex items-center px-2.5 py-1 rounded-full font-label text-label-sm ' + meta.badgeClass + '">' + meta.label + '</span>' +
+          '</button>';
+        }).join('');
+        searchResultsEl.classList.remove('hidden');
+        searchResultsEl.querySelectorAll('[data-search-book]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            searchResultsEl.classList.add('hidden');
+            openBookDetail(btn.getAttribute('data-search-book'));
+          });
+        });
+      }
+      searchInputEl.addEventListener('input', function (e) { renderSearchDropdown(e.target.value); });
+      clearSearchBtn.addEventListener('click', function () {
+        searchInputEl.value = '';
+        renderSearchDropdown('');
+        searchInputEl.focus();
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('#tusach-search-section')) searchResultsEl.classList.add('hidden');
+      });
+
+      // ==================== 5. CurvedLoop Author Marquee ====================
+      const curvedTextPath = document.getElementById('curved-loop-textpath');
+      const curvedWrapper = document.getElementById('curved-loop-wrapper');
+      const authorPanel = document.getElementById('author-books-panel');
+      const authorHeading = document.getElementById('author-books-heading');
+      const authorCount = document.getElementById('author-books-count');
+      const authorList = document.getElementById('author-books-list');
+      const resetAuthorBtn = document.getElementById('reset-author-filter-btn');
+      const resetAuthorLabel = document.getElementById('reset-author-label');
+
+      function selectAuthorFromLoop(authorName) {
+        const matched = books.filter(function (b) { return (b.author || '').toLowerCase() === authorName.toLowerCase(); });
+        authorHeading.textContent = 'Tác phẩm của ' + authorName;
+        authorCount.textContent = matched.length + ' cuốn';
+        authorList.innerHTML = matched.map(function (b) {
+          const meta = STATUS_META[b.status] || STATUS_META.want;
+          return '<button type="button" data-author-book="' + b.id + '" class="flex items-center gap-gutter-md p-gutter-md rounded-lg bg-dark-surface-container border border-dark-outline-variant hover:border-kale-pink transition-colors text-left">' +
+            '<img src="' + b.image + '" alt="' + b.title + '" class="w-14 h-20 object-cover rounded-md flex-shrink-0" />' +
+            '<div class="min-w-0 flex-1 flex flex-col gap-1">' +
+              '<div class="flex items-center justify-between gap-2">' +
+                '<span class="font-title text-title-sm text-light-surface-bright truncate">' + b.title + '</span>' +
+                '<span class="px-2 py-0.5 rounded-full font-label text-[11px] flex-shrink-0 ' + meta.badgeClass + '">' + meta.label + '</span>' +
+              '</div>' +
+              '<p class="font-body text-body-sm text-dark-on-surface-variant line-clamp-2">' + (b.synopsis || '') + '</p>' +
+            '</div>' +
+          '</button>';
+        }).join('');
+        authorList.querySelectorAll('[data-author-book]').forEach(function (cardBtn) {
+          cardBtn.addEventListener('click', function () { openBookDetail(cardBtn.getAttribute('data-author-book')); });
+        });
+        authorPanel.classList.remove('hidden');
+        resetAuthorLabel.textContent = authorName + ' · Bỏ lọc';
+        resetAuthorBtn.classList.remove('hidden');
+        renderDriftPool(matched.length > 0 ? matched : books, 'Tác giả · ' + authorName, matched.length);
+      }
+
+      resetAuthorBtn.addEventListener('click', function () {
+        resetAuthorBtn.classList.add('hidden');
+        authorPanel.classList.add('hidden');
+        rebuildDriftWall(currentTag);
+      });
+
+      const SVG_NS = 'http://www.w3.org/2000/svg';
+      const uniqueAuthors = [];
+      books.forEach(function (b) { if (b.author && uniqueAuthors.indexOf(b.author) === -1) uniqueAuthors.push(b.author); });
+      uniqueAuthors.concat(uniqueAuthors).concat(uniqueAuthors).forEach(function (author) {
+        const tspan = document.createElementNS(SVG_NS, 'tspan');
+        tspan.textContent = author;
+        tspan.setAttribute('class', 'curved-author-tspan');
+        tspan.addEventListener('click', function (e) {
+          if (curvedDragged) return;
+          e.stopPropagation();
+          selectAuthorFromLoop(author);
+        });
+        curvedTextPath.appendChild(tspan);
+
+        const sep = document.createElementNS(SVG_NS, 'tspan');
+        sep.textContent = '   ✦   ';
+        sep.setAttribute('fill', '#99b966');
+        curvedTextPath.appendChild(sep);
+      });
+
+      let curveOffset = 0;
+      let isDraggingCurve = false;
+      let curvedDragged = false;
+      let dragStartX = 0;
+      curvedWrapper.addEventListener('pointerdown', function (e) { isDraggingCurve = true; curvedDragged = false; dragStartX = e.clientX; });
+      window.addEventListener('pointermove', function (e) {
+        if (!isDraggingCurve) return;
+        const dx = e.clientX - dragStartX;
+        if (Math.abs(dx) > 4) curvedDragged = true;
+        dragStartX = e.clientX;
+        curveOffset += dx * 1.4;
+      });
+      window.addEventListener('pointerup', function () { isDraggingCurve = false; setTimeout(function () { curvedDragged = false; }, 50); });
+      function tickCurvedLoop() {
+        if (!isDraggingCurve) curveOffset -= 1.4;
+        if (curveOffset < -2600) curveOffset += 1300;
+        if (curveOffset > 0) curveOffset -= 1300;
+        curvedTextPath.setAttribute('startOffset', curveOffset.toFixed(1) + 'px');
+        requestAnimationFrame(tickCurvedLoop);
+      }
+      requestAnimationFrame(tickCurvedLoop);
+
+      // ==================== 6. Book Detail + 3D FlipCard Modal ====================
+      const detailModal = document.getElementById('book-detail-modal');
+      const modalFlipScene = document.getElementById('modal-flip-scene');
+      const modalFlipTilt = document.getElementById('modal-flip-tilt');
+      const modalFlipGlare = document.getElementById('modal-flip-glare');
+      let currentDetailBook = null;
+
+      modalFlipScene.addEventListener('mousemove', function (e) {
+        const r = modalFlipScene.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;
+        const py = (e.clientY - r.top) / r.height;
+        modalFlipTilt.style.transform = 'scale(1.03) rotateX(' + ((0.5 - py) * 24).toFixed(1) + 'deg) rotateY(' + ((px - 0.5) * 24).toFixed(1) + 'deg)';
+        modalFlipGlare.style.background = 'radial-gradient(circle at ' + (px * 100).toFixed(0) + '% ' + (py * 100).toFixed(0) + '%, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 65%)';
+      });
+      modalFlipScene.addEventListener('mouseleave', function () {
+        modalFlipTilt.style.transform = 'scale(1) rotateX(0deg) rotateY(0deg)';
+      });
+      modalFlipScene.addEventListener('click', function () { modalFlipScene.classList.toggle('is-flipped'); });
+      document.getElementById('manual-flip-btn').addEventListener('click', function () { modalFlipScene.classList.toggle('is-flipped'); });
+
+      function openBookDetail(bookId) {
+        const book = books.find(b => b.id === bookId);
+        if (!book) return;
+        currentDetailBook = book;
+        modalFlipScene.classList.remove('is-flipped');
+        document.getElementById('detail-book-cover').src = book.image;
+        document.getElementById('detail-book-title').textContent = book.title;
+        document.getElementById('detail-book-author').textContent = book.author;
+        document.getElementById('detail-genre-badge').textContent = book.genre || 'Văn học';
+        document.getElementById('detail-book-synopsis').textContent = book.synopsis || 'Chưa có văn án.';
+        document.getElementById('detail-book-notes').value = book.notes || '';
+        document.getElementById('flip-back-title').textContent = book.title;
+        document.getElementById('flip-back-author').textContent = book.author;
+        document.getElementById('flip-back-genre').textContent = book.genre || 'Văn học';
+        document.getElementById('flip-back-synopsis').textContent = book.synopsis || 'Chưa có văn án.';
+        document.getElementById('flip-back-rating').textContent = (book.rating || 4) + '/5 ★';
+
+        const meta = STATUS_META[book.status] || STATUS_META.want;
+        const badge = document.getElementById('detail-status-badge');
+        badge.textContent = meta.label;
+        badge.className = 'inline-flex items-center px-3 py-1 rounded-full font-label text-label-sm ' + meta.badgeClass;
+
+        renderDetailStars(book.rating || 4);
+        highlightDetailStatus(book.status);
+        detailModal.classList.remove('hidden');
+      }
+
+      function renderDetailStars(rating) {
+        const row = document.getElementById('detail-star-row');
+        row.innerHTML = '';
+        for (let s = 1; s <= 5; s++) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.innerHTML = '<span class="material-symbols-outlined text-[22px] ' + (s <= rating ? 'text-kale-pink' : 'text-light-outline') + '" style="font-variation-settings: \'FILL\' ' + (s <= rating ? 1 : 0) + ';">star</span>';
+          btn.addEventListener('click', function () {
+            if (currentDetailBook) {
+              currentDetailBook.rating = s;
+              renderDetailStars(s);
+              document.getElementById('flip-back-rating').textContent = s + '/5 ★';
+            }
+          });
+          row.appendChild(btn);
+        }
+        document.getElementById('detail-rating-text').textContent = rating + '/5';
+      }
+
+      function highlightDetailStatus(status) {
+        document.querySelectorAll('.detail-status-btn').forEach(function (btn) {
+          const active = btn.getAttribute('data-detail-status') === status;
+          btn.className = active
+            ? 'detail-status-btn px-3 py-1.5 rounded-full font-label text-label-sm bg-light-primary text-light-on-primary'
+            : 'detail-status-btn px-3 py-1.5 rounded-full font-label text-label-sm bg-light-surface-container text-light-on-surface';
+        });
+      }
+      document.querySelectorAll('.detail-status-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (currentDetailBook) {
+            currentDetailBook.status = btn.getAttribute('data-detail-status');
+            highlightDetailStatus(currentDetailBook.status);
+          }
+        });
+      });
+      document.getElementById('save-detail-btn').addEventListener('click', function () {
+        if (currentDetailBook) {
+          currentDetailBook.notes = document.getElementById('detail-book-notes').value;
+          saveBooks(books);
+        }
+        detailModal.classList.add('hidden');
+      });
+      document.getElementById('close-detail-modal-btn').addEventListener('click', function () {
+        detailModal.classList.add('hidden');
+      });
+
+      // ==================== 7. Settings & Add Book Modals ====================
+      const settingsModal = document.getElementById('settings-modal');
+      document.getElementById('open-settings-btn').addEventListener('click', function () { settingsModal.classList.remove('hidden'); });
+      document.getElementById('close-settings-btn').addEventListener('click', function () { settingsModal.classList.add('hidden'); });
+      document.getElementById('done-settings-btn').addEventListener('click', function () { settingsModal.classList.add('hidden'); });
+      document.getElementById('setting-drift-speed').addEventListener('change', function (e) { driftBaseSpeed = parseInt(e.target.value, 10); });
+
+      document.querySelectorAll('.theme-preset-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const preset = btn.getAttribute('data-theme-preset');
+          document.querySelectorAll('.theme-preset-btn').forEach(b => b.classList.remove('border-2', 'border-light-primary'));
+          btn.classList.add('border-2', 'border-light-primary');
+          const t2 = document.getElementById('template-2');
+          t2.classList.remove('bg-cream-surface', 'bg-dark-surface', 'text-light-on-surface', 'text-dark-on-surface');
+          if (preset === 'plum') {
+            t2.classList.add('bg-dark-surface', 'text-dark-on-surface');
+          } else {
+            t2.classList.add('bg-cream-surface', 'text-light-on-surface');
+          }
+        });
+      });
+
+      const addModal = document.getElementById('add-book-modal');
+      document.getElementById('add-book-open-btn').addEventListener('click', function () { addModal.classList.remove('hidden'); });
+      document.getElementById('close-add-modal-btn').addEventListener('click', function () { addModal.classList.add('hidden'); });
+      document.getElementById('cancel-add-btn').addEventListener('click', function () { addModal.classList.add('hidden'); });
+      document.getElementById('add-book-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const title = document.getElementById('new-title').value.trim();
+        const author = document.getElementById('new-author').value.trim();
+        const genre = document.getElementById('new-genre').value;
+        const synopsis = document.getElementById('new-synopsis').value.trim();
+        const status = document.getElementById('new-status').value;
+        if (!title || !author) return;
+        const imgIdx = (books.length % 6) + 1;
+        books.unshift({
+          id: 'b_' + Date.now(),
+          title: title,
+          author: author,
+          genre: genre,
+          rating: 5,
+          synopsis: synopsis || 'Cuốn sách mới được lưu vào Hang Chuột Chũi.',
+          notes: '',
+          image: '../../images/book_cover_' + imgIdx + '.jpg',
+          status: status
+        });
+        saveBooks(books);
+        rebuildDriftWall(currentTag);
+        e.target.reset();
+        addModal.classList.add('hidden');
+      });
+
+      // ==================== 8. ClickSpark Global Effect ====================
+      const sparkCanvas = document.getElementById('click-spark-canvas');
+      if (sparkCanvas) {
+        const sctx = sparkCanvas.getContext('2d');
+        const sparks = [];
+        function resizeSpark() { sparkCanvas.width = window.innerWidth; sparkCanvas.height = window.innerHeight; }
+        resizeSpark();
+        window.addEventListener('resize', resizeSpark);
+        document.addEventListener('click', function (e) {
+          const now = performance.now();
+          for (let i = 0; i < 8; i++) {
+            sparks.push({ x: e.clientX, y: e.clientY, angle: (2 * Math.PI * i) / 8, startTime: now });
+          }
+        });
+        function drawSparks(now) {
+          sctx.clearRect(0, 0, sparkCanvas.width, sparkCanvas.height);
+          for (let i = sparks.length - 1; i >= 0; i--) {
+            const sp = sparks[i];
+            const elapsed = now - sp.startTime;
+            if (elapsed >= 500) { sparks.splice(i, 1); continue; }
+            const p = elapsed / 500;
+            const eased = p * (2 - p);
+            const dist = eased * 30;
+            const len = 14 * (1 - eased);
+            sctx.strokeStyle = 'rgba(255, 255, 255, ' + (1 - p).toFixed(2) + ')';
+            sctx.lineWidth = 2;
+            sctx.lineCap = 'round';
+            sctx.beginPath();
+            sctx.moveTo(sp.x + dist * Math.cos(sp.angle), sp.y + dist * Math.sin(sp.angle));
+            sctx.lineTo(sp.x + (dist + len) * Math.cos(sp.angle), sp.y + (dist + len) * Math.sin(sp.angle));
+            sctx.stroke();
+          }
+          requestAnimationFrame(drawSparks);
+        }
+        requestAnimationFrame(drawSparks);
+      }
+    })();
+  </script>
+
+
+</body></html>

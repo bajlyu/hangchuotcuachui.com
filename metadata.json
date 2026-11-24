@@ -1,0 +1,6 @@
+{
+  "name": "Hang Chuột Chũi",
+  "description": "Website đọc và lưu trữ sách cá nhân với dòng sách 3D DriftWall, bộ lọc thẻ LineSidebar và thẻ lật 3D FlipCard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

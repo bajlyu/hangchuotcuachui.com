@@ -1,0 +1,454 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand & Semantic Colors */
+  --color-forest-hero: #164A33;
+  --color-kale-pink: #F49AC1;
+  --color-kale-olive: #6E8F24;
+  --color-plum-overlay: #690055;
+  --color-cream-surface: #F6F3EE;
+
+  /* Light Palette */
+  --color-light-primary: #00331F;
+  --color-light-on-primary: #FFFFFF;
+  --color-light-primary-container: #164A33;
+  --color-light-on-primary-container: #85B99B;
+  --color-light-secondary: #904669;
+  --color-light-on-secondary: #FFFFFF;
+  --color-light-secondary-container: #FEA3CA;
+  --color-light-on-secondary-container: #7B3457;
+  --color-light-tertiary: #213000;
+  --color-light-on-tertiary: #FFFFFF;
+  --color-light-tertiary-container: #334800;
+  --color-light-on-tertiary-container: #96BA4B;
+  --color-light-error: #BA1A1A;
+  --color-light-on-error: #FFFFFF;
+  --color-light-error-container: #FFDAD6;
+  --color-light-on-error-container: #93000A;
+  --color-light-background: #F9FAF6;
+  --color-light-on-background: #191C1A;
+  --color-light-surface: #F9FAF6;
+  --color-light-surface-dim: #D9DAD7;
+  --color-light-surface-bright: #FFFFFF;
+  --color-light-surface-container-lowest: #FFFFFF;
+  --color-light-surface-container-low: #F3F4F0;
+  --color-light-surface-container: #EDEEEA;
+  --color-light-surface-container-high: #E7E9E5;
+  --color-light-surface-container-highest: #E1E3DF;
+  --color-light-on-surface: #191C1A;
+  --color-light-surface-variant: #DCE5DD;
+  --color-light-on-surface-variant: #414943;
+  --color-light-outline: #717973;
+  --color-light-outline-variant: #C0C9C1;
+  --color-light-inverse-surface: #2E312F;
+  --color-light-inverse-on-surface: #F0F1ED;
+  --color-light-inverse-primary: #9DD2B3;
+
+  /* Dark Palette */
+  --color-dark-primary: #9DD2B3;
+  --color-dark-on-primary: #003823;
+  --color-dark-primary-container: #164A33;
+  --color-dark-on-primary-container: #85B99B;
+  --color-dark-secondary: #FFAFD0;
+  --color-dark-on-secondary: #581739;
+  --color-dark-secondary-container: #732E51;
+  --color-dark-on-secondary-container: #F49AC1;
+  --color-dark-tertiary: #AED361;
+  --color-dark-on-tertiary: #253600;
+  --color-dark-tertiary-container: #334800;
+  --color-dark-on-tertiary-container: #96BA4B;
+  --color-dark-error: #FFB4AB;
+  --color-dark-on-error: #690005;
+  --color-dark-error-container: #93000A;
+  --color-dark-on-error-container: #FFDAD6;
+  --color-dark-background: #111412;
+  --color-dark-on-background: #E1E3DF;
+  --color-dark-surface: #111412;
+  --color-dark-surface-dim: #111412;
+  --color-dark-surface-bright: #373A37;
+  --color-dark-surface-container-lowest: #0C0F0D;
+  --color-dark-surface-container-low: #191C1A;
+  --color-dark-surface-container: #1D201E;
+  --color-dark-surface-container-high: #282B28;
+  --color-dark-surface-container-highest: #333533;
+  --color-dark-on-surface: #E1E3DF;
+  --color-dark-surface-variant: #414943;
+  --color-dark-on-surface-variant: #C0C9C1;
+  --color-dark-outline: #8A938C;
+  --color-dark-outline-variant: #414943;
+  --color-dark-inverse-surface: #E1E3DF;
+  --color-dark-inverse-on-surface: #2E312F;
+  --color-dark-inverse-primary: #36684F;
+
+  /* Spacing Gutters */
+  --spacing-gutter-xs: 4px;
+  --spacing-gutter-sm: 8px;
+  --spacing-gutter-md: 16px;
+  --spacing-gutter-lg: 24px;
+  --spacing-gutter-xl: 32px;
+  --spacing-section: 64px;
+  --spacing-page-margin: 32px;
+
+  /* Typography */
+  --font-display: "Alata", sans-serif;
+  --font-headline: "Alata", sans-serif;
+  --font-title: "Instrument Sans", sans-serif;
+  --font-body: "Instrument Sans", sans-serif;
+  --font-label: "Instrument Sans", sans-serif;
+  --font-mono: "Source Code Pro", monospace;
+
+  /* Type Scale */
+  --text-display-lg: 72px;
+  --text-display-lg--line-height: 76px;
+  --text-display-lg--letter-spacing: -1.5px;
+
+  --text-display-lg-mobile: 32px;
+  --text-display-lg-mobile--line-height: 38px;
+  --text-display-lg-mobile--letter-spacing: -0.5px;
+
+  --text-headline-lg: 36px;
+  --text-headline-lg--line-height: 42px;
+  --text-headline-lg--letter-spacing: -0.5px;
+
+  --text-headline-lg-mobile: 24px;
+  --text-headline-lg-mobile--line-height: 30px;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+
+  --text-title-lg: 20px;
+  --text-title-lg--line-height: 28px;
+  --text-title-lg--letter-spacing: -0.2px;
+
+  --text-title-md: 16px;
+  --text-title-md--line-height: 24px;
+
+  --text-title-sm: 15px;
+  --text-title-sm--line-height: 22px;
+
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 24px;
+
+  --text-body-md: 14px;
+  --text-body-md--line-height: 20px;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 18px;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--letter-spacing: 0.1px;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.2px;
+
+  --text-mono-sm: 12px;
+  --text-mono-sm--line-height: 16px;
+}
+
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1 !important;
+  box-sizing: content-box;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+}
+
+/* ==================== Morph Transition: Template 1 <-> Template 2 <-> Template 3 ==================== */
+.morph-stage {
+  position: relative;
+  overflow-x: hidden;
+}
+.template-layer {
+  transition:
+    transform 750ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity, filter;
+}
+.stage-t1 #template-1 {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0px);
+  pointer-events: auto;
+  position: relative;
+  z-index: 20;
+}
+.stage-t1 #template-2,
+.stage-t1 #template-3 {
+  opacity: 0;
+  transform: scale(1.05) translateY(40px);
+  filter: blur(10px);
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+.stage-t2 #template-1 {
+  opacity: 0;
+  transform: scale(0.86) translateY(-48px);
+  filter: blur(12px);
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+.stage-t2 #template-2 {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0px);
+  pointer-events: auto;
+  position: relative;
+  z-index: 20;
+}
+.stage-t2 #template-3 {
+  opacity: 0;
+  transform: scale(1.05) translateY(40px);
+  filter: blur(10px);
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+.stage-t3 #template-1,
+.stage-t3 #template-2 {
+  opacity: 0;
+  transform: scale(0.9) translateY(-40px);
+  filter: blur(12px);
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+.stage-t3 #template-3 {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0px);
+  pointer-events: auto;
+  position: relative;
+  z-index: 20;
+}
+.hero-wordmark {
+  transition: transform 750ms cubic-bezier(0.22, 1, 0.36, 1), letter-spacing 750ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.stage-t2 .hero-wordmark,
+.stage-t3 .hero-wordmark {
+  transform: scale(0.65) translateY(-80px);
+  letter-spacing: 0.08em;
+}
+
+/* ==================== DriftWall 3D Engine ==================== */
+.driftwall-viewport {
+  position: relative;
+  height: 680px;
+  width: 100%;
+  overflow: hidden;
+  perspective: 1700px;
+  perspective-origin: 50% 42%;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 4%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 4%, black 90%, transparent 100%);
+}
+.driftwall-plane {
+  position: absolute;
+  inset: -210px -120px -80px -120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px;
+  transform-style: preserve-3d;
+  transform: rotateX(16deg) rotateY(-28deg);
+  transition: transform 180ms ease-out;
+}
+.driftwall-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 180px;
+  flex-shrink: 0;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.driftwall-tile {
+  position: relative;
+  width: 180px;
+  height: 262px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 320ms ease-out;
+  box-shadow: 0 14px 28px rgba(105, 0, 85, 0.22);
+}
+.driftwall-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.78);
+  transition: filter 320ms ease-out, transform 320ms ease-out;
+}
+.driftwall-tile .tile-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #690055;
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+  transition: opacity 320ms ease-out;
+}
+.driftwall-tile:hover {
+  transform: translateZ(64px) scale(1.06);
+  box-shadow: 0 24px 44px rgba(105, 0, 85, 0.4);
+  z-index: 30;
+}
+.driftwall-tile:hover img {
+  filter: grayscale(0%) brightness(1);
+}
+.driftwall-tile:hover .tile-overlay {
+  opacity: 0.08;
+}
+
+/* ==================== LineSidebar Tag Selector ==================== */
+.line-sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+.line-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: #f0ffd5;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  padding: 4px 0;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  transition: transform 100ms cubic-bezier(0.22, 1, 0.36, 1), color 180ms ease-out;
+  will-change: transform;
+}
+.line-sidebar-tick {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: rgba(240, 255, 213, 0.32);
+  transform-origin: left center;
+  transform: scaleX(0.5);
+  transition: transform 100ms cubic-bezier(0.22, 1, 0.36, 1), width 180ms ease-out, background-color 180ms ease-out;
+  flex-shrink: 0;
+}
+.line-sidebar-index {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.78rem;
+  opacity: 0.55;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  transition: color 180ms ease-out, opacity 180ms ease-out;
+}
+.line-sidebar-label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 180ms ease-out, font-weight 180ms ease-out;
+}
+.line-sidebar-item.is-active .line-sidebar-tick {
+  width: 60px;
+  transform: scaleX(1) !important;
+  background-color: #99b966;
+}
+.line-sidebar-item.is-active .line-sidebar-index {
+  color: #99b966;
+  opacity: 1;
+}
+.line-sidebar-item.is-active .line-sidebar-label {
+  color: #f0ffd5;
+  font-weight: 700;
+  text-shadow: 0 0 18px rgba(155, 24, 89, 0.65);
+}
+.line-sidebar-item.is-active {
+  border-left: 3px solid #9b1859;
+  padding-left: 10px;
+}
+
+/* ==================== CurvedLoop Author Marquee ==================== */
+.curved-loop-mask {
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.45) 10%, black 22%, black 78%, rgba(0, 0, 0, 0.45) 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.45) 10%, black 22%, black 78%, rgba(0, 0, 0, 0.45) 90%, transparent 100%);
+}
+.curved-author-tspan {
+  cursor: pointer;
+  transition: fill 180ms ease-out, opacity 180ms ease-out;
+}
+.curved-author-tspan:hover {
+  fill: #F49AC1;
+}
+
+/* ==================== 3D FlipCard inside Book Detail Modal ==================== */
+.flip-card-scene {
+  perspective: 1100px;
+  width: 280px;
+  height: 380px;
+}
+.flip-card-tilt {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 650ms cubic-bezier(0.18, 0.89, 0.32, 1.15);
+  border-radius: 22px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+.flip-card-scene.is-flipped .flip-card-inner,
+.flip-card-scene.hover-flip:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 22px;
+  overflow: hidden;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #27272a;
+  color: #f5f5f5;
+}
+.flip-card-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 22px;
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+  z-index: 15;
+}
+.flip-card-scene:hover .flip-card-glare {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .template-layer,
+  .hero-wordmark,
+  .driftwall-tile,
+  .driftwall-plane {
+    transition: none !important;
+  }
+}
